@@ -1,0 +1,112 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card
+{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5;
+
+}
+.card .circle
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.card .circle::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d83133;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+.card:hover .circle:before
+{
+    background: #0065c3;
+    clip-path: circle(400px at center);
+    border-radius: 2em;
+    
+}
+.card img
+{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+.card:hover img
+{
+    Left: 72%;
+    height: 500px;
+}
+.card .content
+{
+    position: relative;
+    width: 50%;
+    padding: 20x 20x 20x 40x;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.card:hover .content
+{
+    Left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+.card .content h2
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-left: 10px;
+}
+.card .content p
+{
+    color: #fff; 
+    margin-left: 10px;
+}
+.card .content a
+{
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    color: black;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+}
